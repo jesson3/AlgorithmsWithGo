@@ -11,7 +11,7 @@ func ShellSort(a []Comparable) {
 		//	h-sort the array.
 		for i := h; i < N; i++ {
 			// Insert a[i] among a[i-h], a[i-2*h], a[i-3*h]... .
-			for j := 0; j >= h && less(a[j], a[j-h]); j -= h {
+			for j := ; j >= h && less(a[j], a[j-h]); j -= h {
 				exch(a, j, j-h)
 			}
 			h = h / 3
